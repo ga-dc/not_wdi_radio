@@ -1,0 +1,7 @@
+<div>
+  {{ song.title}}
+  <!-- {{ song.audio_url }} -->
+  <audio controls="controls" preload="none">
+    <source type="audio/mpeg" ng-src="{{song.audio_url}}"/>
+  </audio>
+</div>
