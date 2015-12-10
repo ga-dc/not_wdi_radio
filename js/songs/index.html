@@ -5,7 +5,14 @@
 <div data-song-form data-song="SongsIndexViewModel.newSong"></div>
 
 <div data-ng-repeat="song in SongsIndexViewModel.songs">
-  <p data-ng-click="SongsIndexViewModel.play(song)">
-    {{song.title}}
-  </p>
+  <div class="song">
+    <p data-ng-click="song.showEdit = !song.showEdit">
+      Edit This Song
+    </p>
+    <div ng-show="song.showEdit" data-song-form data-song="song"></div>
+    <div>{{song.showEdit}}</div>
+    <p ng-hide="song.showEdit" data-ng-click="SongsIndexViewModel.play(song)">
+      {{song.title}}
+    </p>
+  </div>
 </div>

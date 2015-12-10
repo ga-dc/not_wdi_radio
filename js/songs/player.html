@@ -1,8 +1,9 @@
 <div>
   {{ song.title}}
+  <img ng-src="{{song.album_art}}">
   <!-- {{ song.audio_url }} -->
   <!-- <audio controls="controls" preload="none">
     <source type="audio/mpeg" ng-src="{{$sce.getTrustedResourceUrl(song.audio_url)}}"/>
   </audio> -->
-  <audio controls ng-src="{{song.encodedUrl}}"></audio>
+  <audio controls autoplay ng-src="{{song.encodedUrl}}"></audio>
 </div>
