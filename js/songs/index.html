@@ -1,18 +1,14 @@
-<h3>PBJ</h3>
+<h3>Library</h3>
 
 <div data-song-player data-song="SongsIndexViewModel.playSong"></div>
 
+<h4>New Song</h4>
 <div data-song-form data-song="SongsIndexViewModel.newSong"></div>
 
 <div data-ng-repeat="song in SongsIndexViewModel.songs">
   <div class="song">
-    <p data-ng-click="song.showEdit = !song.showEdit">
-      Edit This Song
-    </p>
     <div ng-show="song.showEdit" data-song-form data-song="song"></div>
-    <div>{{song.showEdit}}</div>
-    <p ng-hide="song.showEdit" data-ng-click="SongsIndexViewModel.play(song)">
-      {{song.title}}
-    </p>
+    <p ng-hide="song.showEdit" data-ng-click="SongsIndexViewModel.play(song)">{{song.title}}</p>
+    <button type="button" data-ng-click="song.showEdit = !song.showEdit">Edit</button>
   </div>
 </div>

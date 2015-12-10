@@ -20,6 +20,11 @@
               $state.go("songsIndex", {}, {reload: true})
             })
           }
+          scope.update = function(){
+            scope.song.$update({id: scope.song.id}, function(response){
+              console.log(response);
+            })
+          }
         }
       }
     }

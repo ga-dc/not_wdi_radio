@@ -16,7 +16,6 @@
         this.playSong = song
         // workaround for ng-src not allowing expression {{song.audio_url}}
         this.playSong.encodedUrl = $sce.trustAsResourceUrl(song.audio_url)
-        console.log(this);
       }
     }
 }())
